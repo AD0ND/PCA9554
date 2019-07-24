@@ -15,10 +15,10 @@ published by the Free Software Foundation.
 #include <Wire.h>
 
 //PCA9554 Command Byte
-#define INPUTPORT0	0x00
-#define OUTPUTPORT0	0x01
-#define POLINVPORT0	0x02
-#define CONFIGPORT0	0x03
+#define INPUTPORT	0x00
+#define OUTPUTPORT	0x01
+#define POLINVPORT	0x02
+#define CONFIGPORT	0x03
 
 
 #define ALLOUTPUT	0x00
@@ -32,14 +32,14 @@ class PCA9554
 		bool twiRead(byte &registerAddress);
 		bool twiWrite(byte registerAddress, byte dataWrite);
 
-		bool pinMode0(byte pinNumber, bool state);
+		bool pinMode(byte pinNumber, bool state);
 		bool portMode0(byte value);
 		
-		bool digitalWrite0(byte pinNumber, bool state);
-		bool digitalWritePort0(byte value);
+		bool digitalWrite(byte pinNumber, bool state);
+		bool digitalWritePort(byte value);
 				
-		bool digitalRead0(byte &pinNumber);
-		bool digitalReadPort0(byte &value);
+		bool digitalRead(byte &pinNumber);
+		bool digitalReadPort(byte &value);
 		
 	private :
 		int _SlaveAddress;
