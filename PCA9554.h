@@ -33,7 +33,7 @@ class PCA9554
 		bool twiWrite(byte registerAddress, byte dataWrite);
 
 		bool pinMode(byte pinNumber, bool state);
-		bool portMode0(byte value);
+		bool portMode(byte value);
 		
 		bool digitalWrite(byte pinNumber, bool state);
 		bool digitalWritePort(byte value);
