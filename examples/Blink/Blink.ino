@@ -31,8 +31,8 @@ void setup()
   ioCon1.portMode(ALLOUTPUT); //Set the port as all output
 
   //  Can also set pins individually using 
-  //  ioCon1.pinmode(pin number, Input/Output);
-  //  IE: ioCon1.pinmode(1, INPUT); 
+  //  ioCon1.pinMode(pin number, Input/Output);
+  //  IE: ioCon1.pinMode(1, INPUT); 
 }
 
 
@@ -161,4 +161,10 @@ void loop()
     ioCon1.digitalWritePort(~(1 << i));
     delay(75);
   }
+
+  // You can also read pins (if you set it's mode to INPUT in setup)
+  // byte x = 2; // read pin 2
+  // ioCon1.digitalRead(x); 
+  // Serial.print("pin 2 value is ");
+  // Serial.println(x);
 }
